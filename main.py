@@ -4,6 +4,7 @@ import json
 from random import randint
 import pyperclip
 from pynput import keyboard
+import sys
 
 headers = {"Authorization": f"Bearer {config.api_key}"}
 the_one_list = requests.get("https://the-one-api.dev/v2/quote", headers=headers).json()
@@ -42,6 +43,9 @@ def on_release(key):
         print('coppied')
         combo_pressed = False
 
-
-with keyboard.Listener(on_press=on_press, on_release=on_release) as listener:
-    listener.join()
+try:
+    with keyboard.Listener(on_press=on_press, on_release=on_release) as listener:
+        listener.join()
+except KeyboardInterrupt:
+    print("Cya 👋")
+    sys.exit(0)
