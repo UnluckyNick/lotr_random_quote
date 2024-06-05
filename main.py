@@ -6,10 +6,7 @@ import pyperclip
 from pynput import keyboard
 
 headers = {"Authorization": f"Bearer {config.api_key}"}
-
-response = requests.get("https://the-one-api.dev/v2/quote", headers=headers)
-
-the_one_list = response.json()
+the_one_list = requests.get("https://the-one-api.dev/v2/quote", headers=headers).json()
 
 print('Ready')
 
