@@ -1,0 +1,49 @@
+# Lord of the Rings Quotes to Clipboard
+
+This Python script fetches random quotes from the Lord of the Rings series using an API and copies them to the clipboard. The script requires a configuration file for the API key and specific Python libraries.
+
+## Prerequisites
+
+Ensure you have Python installed on your system. You can download it from [python.org](https://www.python.org/).
+
+## Installation
+
+1. **Clone the repository or download the script.**
+
+2. **Install the required libraries:**
+   
+   Open a terminal or command prompt and run:
+   ```bash
+   pip install pyperclip pynput requests
+   ```
+
+## Configuration
+
+Create a `config.py` file in the same directory as your script with the following content:
+
+```python
+# config.py
+
+api_key = "YOUR_API_KEY"
+```
+
+Replace `"YOUR_API_KEY"` with your actual API key.
+
+## Usage
+
+Run the script using Python:
+
+```bash
+python main.py
+```
+
+## Notes
+
+- Ensure your `config.py` file is not shared publicly to keep your API key secure.
+- If you encounter any issues, check if the API service is available and your API key is correct.
+
+## License
+
+This project is licensed under the MIT License.
+
+Feel free to modify and enhance the script to suit your needs!
