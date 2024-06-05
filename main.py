@@ -15,8 +15,8 @@ print('Ready')
 
 #on keystroke run below
 # Keyboard shortcut
-combination = {keyboard.Key.cmd, 
-               keyboard.Key.shift, keyboard.KeyCode(char="v")}
+combination = {keyboard.Key.shift, keyboard.Key.cmd, 
+               keyboard.KeyCode(char="6"), keyboard.KeyCode(char="9")}
 
 # The currently active modifiers
 current = set()
