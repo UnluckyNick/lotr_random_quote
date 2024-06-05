@@ -11,6 +11,8 @@ response = requests.get("https://the-one-api.dev/v2/quote", headers=headers)
 
 the_one_list = response.json()
 
+print('Ready')
+
 #on keystroke run below
 # Keyboard shortcut
 combination = {keyboard.Key.cmd, 
@@ -30,7 +32,7 @@ def on_press(key):
             random_number = randint(0, 999)
             dialog = the_one_list['docs'][random_number]['dialog']
             pyperclip.copy(f"{dialog}")
-        listener.stop()
+            #listener.stop()
 
 
 def on_release(key):
